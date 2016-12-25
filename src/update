@@ -1,0 +1,34 @@
+#!/usr/bin/env sh
+
+echo
+echo "Setting environment variables ..."
+if [ "$1" == "-p" ]; then
+    cp ../deploys/20151217/production/.env .env
+else
+    if [ ! -f .env ]; then
+        cp ../deploys/20151217/local/.env .env
+    fi
+
+    echo "Creating config.params.php file if any ..."
+    if [ ! -f application/shared/Modules/config.params.php ]; then
+        cp ../deploys/20151217/local/config.params.php application/shared/Modules/config.params.php
+    fi
+fi
+
+echo
+if [ "$1" == "-f" ] || [ "$1" == "-p" ]; then
+    vendor/bin/doctrine orm:schema-tool:drop --force
+fi
+vendor/bin/doctrine orm:schema-tool:update --force
+
+echo
+echo "Generating proxies ..."
+if [ "$1" == "-f" ] || [ "$1" == "-p" ]; then
+    ls application/system/cache/proxies/* | grep -v .gitignore | xargs rm -f
+fi
+vendor/bin/doctrine orm:generate:proxies
+
+echo
+echo "Deleting temporary files ..."
+ls application/system/cache/sessions/* | grep -v .gitignore | xargs rm -f
+ls application/system/logs/* | grep -v .gitignore | xargs rm -f

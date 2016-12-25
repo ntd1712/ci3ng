@@ -1,0 +1,65 @@
+{
+  "name": "chaos/ci3ng",
+  "description": "A CodeIgniter 3 + Doctrine 2 + Angular boilerplate",
+  "type": "project",
+  "keywords": ["ntd1712", "chaos", "ci3ng", "codeigniter", "doctrine", "angular"],
+  "homepage": "http://taingheso.com",
+  "license": "BSD 3-Clause",
+  "authors": [
+    {"name": "Dzung Nguyen", "email": "ntd1712@hotmail.com"}
+  ],
+  "require": {
+    "chaos/common": "dev-master@dev",
+    "ezyang/htmlpurifier": "~4.8",
+    "emarref/jwt": "~1.0",
+    "nesbot/carbon": "~1.21",
+    "vlucas/phpdotenv": "~2.4",
+    "codeigniter/framework": "~3.1.2",
+    "chriskacerguis/codeigniter-restserver": "~2.7",
+    "davinder17s/codeigniter-middleware": "*"
+  },
+  "require-dev": {
+    "fzaninotto/faker": "dev-master"
+  },
+  "autoload": {
+    "classmap": [
+      "vendor/chriskacerguis/codeigniter-restserver/application/libraries/REST_Controller.php"
+    ],
+    "psr-4": {
+      "Shared\\": "application/shared/",
+      "": "application/shared/Modules/"
+    },
+    "files": [
+      "application/shared/functions.php"
+    ]
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "repositories": [{
+    "type": "vcs",
+    "url": "https://github.com/ntd1712/common"
+  },{
+    "type": "package",
+    "package": {
+      "name": "davinder17s/codeigniter-middleware",
+      "version": "0.1",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/davinder17s/codeigniter-middleware",
+        "reference": "master"
+      }
+    }
+  }],
+  "config": {
+    "discard-changes": true,
+    "preferred-install": "dist"
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "sh update"
+    ],
+    "post-update-cmd": [
+      "sh update"
+    ]
+  }
+}
