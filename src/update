@@ -8,11 +8,6 @@ else
     if [ ! -f .env ]; then
         cp ../deploys/20151217/local/.env .env
     fi
-
-    echo "Creating config.params.php file if any ..."
-    if [ ! -f application/shared/Modules/config.params.php ]; then
-        cp ../deploys/20151217/local/config.params.php application/shared/Modules/config.params.php
-    fi
 fi
 
 echo

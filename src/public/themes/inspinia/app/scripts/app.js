@@ -1,4 +1,4 @@
-(function(Lockr) { "use strict";
+(function(angular, Lockr) { "use strict";
 /**
  * @author ntd1712
  * @namespace
@@ -95,7 +95,9 @@ if (void 0 !== window.swal) {
     };
 }
 
-})(Lockr);
+})(window.angular, window.Lockr);
+
+// <editor-fold desc="Prototypal inheritance" defaultstate="collapsed">
 
 if (void 0 === Object.create) {
     /**
@@ -153,3 +155,5 @@ if (void 0 === window.extend) {
         }
     }
 }
+
+// </editor-fold>

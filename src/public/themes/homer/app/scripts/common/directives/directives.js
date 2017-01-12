@@ -1,4 +1,4 @@
-(function(Lockr, _, $) {
+(function(_, chaos, $, Lockr) {
 /**
  * @author ntd1712
  */
@@ -306,4 +306,4 @@ function unescape() {
     };
 }
 
-})(Lockr, _, jQuery);
+})(window._, window.chaos, window.jQuery, window.Lockr);

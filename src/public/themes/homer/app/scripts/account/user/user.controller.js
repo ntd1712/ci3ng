@@ -1,4 +1,4 @@
-(function() { "use strict";
+(function(_, angular) { "use strict";
 /**
  * @author ntd1712
  */
@@ -10,7 +10,7 @@ function Anonymous($scope, UserRepository, RoleRepository, AbstractController) {
     }
     extend(UserController, AbstractController);
 
-    UserController.prototype.beforeForm = function(id, isNew) {
+    UserController.prototype.beforeForm = function(/*id, isNew*/) {
         $scope.roles = { data: [], primary: { Id: 0 }, secondary: [], filter: function(value) {
             return void 0 === _.find([$scope.roles.primary].concat($scope.roles.secondary), { Id: value.Id });
         }};
@@ -43,11 +43,11 @@ function Anonymous($scope, UserRepository, RoleRepository, AbstractController) {
         });
     };
 
-    UserController.prototype.beforeSave = function(model, id, isNew) {
+    UserController.prototype.beforeSave = function(model/*, id, isNew*/) {
         model.Roles = [$scope.roles.primary].concat($scope.roles.secondary);
     };
 
     return UserController.newInstance(arguments);
 }
 
-})();
+})(window._, window.angular);

@@ -1,4 +1,4 @@
-(function() { "use strict";
+(function(angular) { "use strict";
 /**
  * @author ntd1712
  */
@@ -13,7 +13,7 @@ function Anonymous($scope, RegisterRepository, AbstractController) {
     RegisterController.prototype.register = function(model) {
         this.repository.store(model).then(
             function() {
-                delete $scope.$parent.error;
+                $scope.$parent.error = undefined;
                 $scope.$parent.growl = "YOU_HAVE_SUCCESSFULLY_REGISTERED";
                 $scope.$state.go("login", {}, { reload: true });
             },
@@ -25,10 +25,10 @@ function Anonymous($scope, RegisterRepository, AbstractController) {
     };
 
     RegisterController.prototype.cancel = function() {
-        delete $scope.model;
+        $scope.model = undefined;
     };
 
     return RegisterController.newInstance(arguments);
 }
 
-})();
+})(window.angular);

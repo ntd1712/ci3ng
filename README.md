@@ -30,9 +30,9 @@ IncludeOptional "c:/wamp/www/ci3ng/deploys/20151217/local/httpd-vhosts.conf"
 
 # Install the following first:
 https://git-scm.com
-https://nodejs.org [v4.4.7]
-http://rubyinstaller.org
 https://getcomposer.org
+https://nodejs.org#v4.4.7
+http://rubyinstaller.org
 
 # After Node is installed, run the following commands step by step:
 npm install -g bower
@@ -45,7 +45,7 @@ gem install sass
 ####################
 
 # Create a new database named "ci3ng"
-# Import DB from file "deploys/20151217/local/database/db.zip" into your MySQL
+# Import DB from file "deploys/20151217/local/database/db.sql" into your MySQL
 # cd to the "src" directory, run the command "composer install" in Terminal
 # cd to the "src/public/themes/homer" directory, run the command "npm install"
 # Login information: demo[@example.com] / @demo*

@@ -1,4 +1,4 @@
-(function() { "use strict";
+(function(angular) { "use strict";
 /**
  * @author ntd1712
  */
@@ -33,4 +33,4 @@ function Anonymous($scope, RoleRepository, PermissionRepository, AbstractControl
     return RoleController.newInstance(arguments);
 }
 
-})();
+})(window.angular);

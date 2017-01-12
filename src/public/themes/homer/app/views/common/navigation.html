@@ -6,7 +6,7 @@
     <!-- side menu -->
     <ul class="nav" id="side-menu" side-navigation>
         <li class="vmenublue" ui-sref-active="active">
-            <a ui-sref="staff.index"><span class="nav-label">{{ 'DASHBOARD' | translate }}</span></a>
+            <a ui-sref="dashboard"><span class="nav-label">{{ 'DASHBOARD' | translate }}</span></a>
         </li>
         <li class="vmenuorange" if-role="backend.account" ng-class="{ active: account_active }"
         ng-init="account_active = $state.includes('user') || $state.includes('role') || $state.includes('permission')">

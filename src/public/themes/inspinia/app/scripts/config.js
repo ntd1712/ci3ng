@@ -1,4 +1,4 @@
-(function(Lockr) { "use strict";
+(function(CFG, chaos, Lockr) { "use strict";
 /**
  * @author ntd1712
  */
@@ -33,10 +33,11 @@ function configBlocks($compileProvider, $httpProvider, $urlRouterProvider,
 
             if (void 0 !== token && void 0 !== jwtHelper && jwtHelper.isTokenExpired(token)) {
                 return $http({
-                    url: $http.defaults.route + "auth/renewtoken?token=" + token,
+                    method: "POST",
                     skipAuthorization: true,
-                    method: "POST"
-                }).then(function(response) {
+                    url: $http.defaults.route + "auth/renewtoken?token=" + token
+                })
+                .then(function(response) {
                     if (response.headers("authorization")) {
                         token = (response.headers("authorization") + "").replace(/bearer\s*/i, "");
                         Lockr.set(CFG.session.cookie + "_jwt", token);
@@ -68,9 +69,9 @@ function configBlocks($compileProvider, $httpProvider, $urlRouterProvider,
 
 function runBlocks($http, $rootScope, $state, $transitions, $translate, jwtHelper) {
     // setup some defaults
-    $http.defaults.route = CFG.app.url + (CFG.urls.api || "/api/");
+    $http.defaults.route = (CFG.urls.api || (CFG.app.url + "/api")) + "/";
     $rootScope.$state = $state;
-    $rootScope.CFG = window.CFG;
+    $rootScope.CFG = CFG;
     // $rootScope._ = window._;
     // $rootScope.moment = window.moment;
 
@@ -88,7 +89,7 @@ function runBlocks($http, $rootScope, $state, $transitions, $translate, jwtHelpe
     $rootScope.$watch("growl", function(newValue) {
         if (void 0 !== newValue) {
             chaos.growl(t(newValue));
-            delete $rootScope.growl;
+            $rootScope.growl = undefined;
         }
     });
 
@@ -121,4 +122,4 @@ function runBlocks($http, $rootScope, $state, $transitions, $translate, jwtHelpe
     });
 }
 
-})(Lockr);
+})(window.CFG, window.chaos, window.Lockr);

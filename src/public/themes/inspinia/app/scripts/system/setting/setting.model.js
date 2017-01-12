@@ -1,4 +1,4 @@
-(function() { "use strict";
+(function(chaos) { "use strict";
 /**
  * @author ntd1712
  */
@@ -46,4 +46,4 @@ function Anonymous(AbstractModel) {
     return SettingModel;
 }
 
-})();
+})(window.chaos);

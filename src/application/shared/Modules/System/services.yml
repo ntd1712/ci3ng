@@ -1,0 +1,30 @@
+services:
+  System\Entities\Audit:
+    class:  System\Entities\Audit
+    shared: false
+  System\Events\AuditListener:
+    class:  System\Events\AuditListener
+  System\Services\AuditService:
+    class:  System\Services\AuditService
+  Audit: '@System\Entities\Audit'
+  AuditService: '@System\Services\AuditService'
+
+  System\Entities\Lookup:
+    class:  System\Entities\Lookup
+    shared: false
+  System\Events\LookupListener:
+    class:  System\Events\LookupListener
+  System\Services\LookupService:
+    class:  System\Services\LookupService
+  Lookup: '@System\Entities\Lookup'
+  LookupService: '@System\Services\LookupService'
+
+  System\Entities\Setting:
+    class:  System\Entities\Setting
+    shared: false
+  System\Events\SettingListener:
+    class:  System\Events\SettingListener
+  System\Services\SettingService:
+    class:  System\Services\SettingService
+  Setting: '@System\Entities\Setting'
+  SettingService: '@System\Services\SettingService'

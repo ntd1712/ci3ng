@@ -1,4 +1,4 @@
-(function($) { "use strict";
+(function(document, window, $) { "use strict";
 /**
  * INSPINIA - Responsive Admin Theme
  * version 2.6.2.1
@@ -18,7 +18,7 @@ function fixHeight($window) {
     $(".sidebard-panel").css("min-height", ($("#wrapper").height() - 61) + "px");
 }
 
-var $body = $("body"),
+var $body = $(document.body),
     $window = $(window)
         .on("load resize", function() {
             if (769 > $(document).width()) {
@@ -47,4 +47,4 @@ $(function() {
     setTimeout(function() { fixHeight($window) }, 0);
 });
 
-})(jQuery);
+})(document, window, window.jQuery);

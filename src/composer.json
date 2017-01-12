@@ -3,8 +3,8 @@
   "description": "A CodeIgniter 3 + Doctrine 2 + Angular boilerplate",
   "type": "project",
   "keywords": ["ntd1712", "chaos", "ci3ng", "codeigniter", "doctrine", "angular"],
-  "homepage": "http://taingheso.com",
-  "license": "BSD 3-Clause",
+  "homepage": "https://github.com/ntd1712",
+  "license": "GPLv2",
   "authors": [
     {"name": "Dzung Nguyen", "email": "ntd1712@hotmail.com"}
   ],

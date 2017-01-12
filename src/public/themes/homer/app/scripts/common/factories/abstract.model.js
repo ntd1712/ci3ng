@@ -1,4 +1,4 @@
-(function() { "use strict";
+(function(chaos) { "use strict";
 /**
  * @author ntd1712
  */
@@ -6,11 +6,11 @@ chaos.factory("AbstractModel", Anonymous);
 
 function Anonymous() {
     // Private static attributes
-    var map = {
-        data: "data",
-        value: "value"
-    };
-    var $data;
+    var $data,
+        map = {
+            data: "data",
+            value: "value"
+        };
 
     /**
      * @constructor
@@ -21,7 +21,9 @@ function Anonymous() {
         $data = data || {};
 
         if (void 0 !== fields) {
-            for (var i = 0, len = fields.length; i < len; i++) {
+            var len = fields.length, i;
+
+            for (i = 0; i < len; i++) {
                 this[fields[i][map.data]] = $data[fields[i][map.data]] || fields[i][map.value];
             }
         }
@@ -55,4 +57,4 @@ function Anonymous() {
     return AbstractModel;
 }
 
-})();
+})(window.chaos);

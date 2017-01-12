@@ -1,4 +1,4 @@
-(function() { "use strict";
+(function(angular) { "use strict";
 /**
  * @author ntd1712
  */
@@ -13,4 +13,4 @@ function Anonymous($scope, AuditRepository, AbstractController) {
     return AuditController.newInstance(arguments);
 }
 
-})();
+})(window.angular);

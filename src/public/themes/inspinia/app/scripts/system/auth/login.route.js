@@ -1,4 +1,4 @@
-(function() { "use strict";
+(function(CFG, chaos, Lockr) { "use strict";
 /**
  * @author ntd1712
  */
@@ -82,4 +82,4 @@ function configBlocks($stateProvider) {
         });
 }
 
-})();
+})(window.CFG, window.chaos, window.Lockr);

@@ -1,0 +1,10 @@
+copyright: Copyright (c) 2017 ntd1712
+title: Admin Panel
+defaultRoute: setting.index
+fallback_locale: en
+locale: en
+dateFormat: Y-m-d
+timeFormat: H:i:s
+imageAllowedExt: gif,jpeg,jpg,png
+imageMaxSize: 2097152 # 2MB
+itemsPerPage: 10

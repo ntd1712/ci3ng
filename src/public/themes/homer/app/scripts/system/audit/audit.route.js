@@ -1,4 +1,4 @@
-(function() { "use strict";
+(function(chaos) { "use strict";
 /**
  * @author ntd1712
  */
@@ -27,7 +27,7 @@ function configBlocks($stateProvider) {
                 $rootScope.dtColumns = { ops: ["show", "destroy"] };
             },
             onExit: function($rootScope) {
-                delete $rootScope.dtColumns;
+                $rootScope.dtColumns = undefined;
             },
             data: {
                 pageTitle: "AUDIT_TRAIL",
@@ -53,4 +53,4 @@ function configBlocks($stateProvider) {
         });
 }
 
-})();
+})(window.chaos);

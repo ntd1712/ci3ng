@@ -33,7 +33,7 @@ class SettingService extends AbstractBaseService
             }
 
             // params.php
-            $source = sys_get_temp_dir() . DIRECTORY_SEPARATOR . md5(microtime(true));
+            $source = sys_get_temp_dir() . '/' . md5(microtime(true));
             $data = '<?php return ' . var_export($config, true) . ';';
 
             if (false !== file_put_contents($source, $data))

@@ -1,4 +1,4 @@
-(function() { "use strict";
+(function(chaos) { "use strict";
 /**
  * @author ntd1712
  */
@@ -13,4 +13,4 @@ function Anonymous(PermissionModel, AbstractRepository) {
     return PermissionRepository.newInstance(arguments);
 }
 
-})();
+})(window.chaos);

@@ -1,4 +1,4 @@
-(function() { "use strict";
+(function(angular, Lockr) { "use strict";
 /**
  * @author ntd1712
  */
@@ -13,9 +13,9 @@ function Anonymous($scope, LoginRepository, AbstractController) {
     LoginController.prototype.login = function(model) {
         this.repository.store(model).then(
             function(response) {
-                delete $scope.$parent.error;
-                Lockr.set(CFG.session.cookie + "_jwt", response.data.token);
-                $scope.$state.go(CFG.app.defaultRoute, {}, { reload: true });
+                Lockr.set($scope.CFG.session.cookie + "_jwt", response.data.token);
+                $scope.$parent.error = undefined;
+                $scope.$state.go($scope.CFG.app.defaultRoute, {}, { reload: true });
             },
             function(response) {
                 $scope.$parent.error = response.data.error || t("COULD_NOT_LOG_IN");
@@ -30,7 +30,7 @@ function Anonymous($scope, LoginRepository, AbstractController) {
                 $scope.$state.go("login", {}, { reload: true });
             })
             .finally(function() {
-                Lockr.rm(CFG.session.cookie + "_jwt");
+                Lockr.rm($scope.CFG.session.cookie + "_jwt");
             });
 
         return this;
@@ -39,7 +39,7 @@ function Anonymous($scope, LoginRepository, AbstractController) {
     LoginController.prototype.recovery = function(model) {
         this.repository.store(model).then(
             function() {
-                delete $scope.$parent.error;
+                $scope.$parent.error = undefined;
                 $scope.$parent.growl = "PLEASE_CHECK_YOUR_EMAIL_FOR_THE_RESET_PASSWORD_INSTRUCTIONS";
                 $scope.$state.go("login", {}, { reload: true });
             },
@@ -57,7 +57,7 @@ function Anonymous($scope, LoginRepository, AbstractController) {
 
         this.repository.store(model).then(
             function() {
-                delete $scope.$parent.error;
+                $scope.$parent.error = undefined;
                 $scope.$state.go("login", {}, { reload: true });
             },
             function(response) {
@@ -70,4 +70,4 @@ function Anonymous($scope, LoginRepository, AbstractController) {
     return LoginController.newInstance(arguments);
 }
 
-})();
+})(window.angular, window.Lockr);

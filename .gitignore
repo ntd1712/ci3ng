@@ -1,7 +1,7 @@
 *~
 *.bak
 *.log
-*.swp
+*.orig
 *.tmp
 
 # Bower, Composer, Node, Sass
@@ -13,7 +13,7 @@ npm-debug.log*
 .tmp/
 *.css.map
 
-# Eclipse, NetBeans, PhpStorm, SublimeText
+# Eclipse, NetBeans, PhpStorm, SublimeText, Vim
 .project
 .buildpath
 .settings/
@@ -21,6 +21,7 @@ nbproject/
 .idea/
 *.cache
 *.sublime-*
+*.swp
 
 # OS
 ._*

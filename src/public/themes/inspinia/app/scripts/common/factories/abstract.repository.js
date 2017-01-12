@@ -1,4 +1,4 @@
-(function() { "use strict";
+(function(chaos) { "use strict";
 /**
  * @author ntd1712
  */
@@ -16,9 +16,9 @@ function Anonymous($cacheFactory, $http) {
      * @param {AbstractModel} model
      */
     function AbstractRepository(model) {
+        this.cache = true;
         this.model = model;
         this.route = $http.defaults.route + model.getRoute();
-        this.cache = true;
     }
 
     // Public, non-privileged methods
@@ -117,4 +117,4 @@ function Anonymous($cacheFactory, $http) {
     return AbstractRepository;
 }
 
-})();
+})(window.chaos);

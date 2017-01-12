@@ -1,4 +1,4 @@
-(function() { "use strict";
+(function(_, angular, chaos, Lockr) { "use strict";
 /**
  * @author ntd1712
  */
@@ -6,15 +6,15 @@ chaos.factory("AbstractController", Anonymous);
 
 function Anonymous($compile) {
     // Private static attributes
-    var map = {
-        id: "Id",
-        data: "data",
-        success: "success",
-        total: "total",
-        start: "start",
-        length: "length"
-    };
-    var $scope;
+    var $scope,
+        map = {
+            id: "Id",
+            data: "data",
+            success: "success",
+            total: "total",
+            start: "start",
+            length: "length"
+        };
 
     /**
      * @constructor
@@ -101,8 +101,8 @@ function Anonymous($compile) {
             };
 
             if (void 0 !== $scope.collection) {
-                var model = _.find($scope.collection,
-                    eval("({" + map.id + ":" + ("number" === typeof id ? id : '"' + String(id).replace(/"/g, "&quot;") + '"') + "})"));
+                var model = _.find($scope.collection, eval("({" + map.id + ":"
+                    + ("number" === typeof id ? id : '"' + String(id).replace(/"/g, "&quot;") + '"') + "})"));
                 handler({ data: model, success: void 0 !== model });
             }
             else {
@@ -242,7 +242,7 @@ function Anonymous($compile) {
                     me.afterSave.call(me, model, id, isNew);
                 }
 
-                delete $scope.$parent.error;
+                $scope.$parent.error = undefined;
                 $scope.$parent.growl = "DATA_SAVED_SUCCESSFULLY";
                 $scope.$state.go(me.route);
             };
@@ -330,7 +330,7 @@ function Anonymous($compile) {
                         }
                     }
 
-                    if (3 <= data.search.value.length) {
+                    if ($scope.CFG.minSearchChars <= data.search.value.length) {
                         params.filter = data.search.value;
                     }
 
@@ -346,7 +346,9 @@ function Anonymous($compile) {
                         });
                 },
                 fnCreatedRow: function(row) {
-                    $compile(row)($scope);
+                    // $compile(angular.element(row))($scope); equals to $compile(row)($scope);
+                    // $compile(angular.element(row).contents())($scope); // pass $scope to td(s)
+                    $compile(row)($scope);                                // pass $scope to tr & td(s)
                 },
                 fnInitComplete: function() {
                     $scope.$parent.dtInstance = this.fnSetFilteringDelay();
@@ -355,7 +357,7 @@ function Anonymous($compile) {
         },
         /**
          * @param {(number|*)} [id]
-         * @param {Object} [response] - For afterForm only
+         * @param {Object} [response] - Exists in afterForm only
          * @param {boolean} [isNew=false]
          * @returns {AbstractController}
          */
@@ -371,7 +373,7 @@ function Anonymous($compile) {
         afterSave: undefined,
         /**
          * @param {(number|*)} id
-         * @param {Object} [response] - For afterDestroy only
+         * @param {Object} response - Exists in afterDestroy only
          * @returns {AbstractController}
          */
         beforeDestroy: undefined,
@@ -381,4 +383,4 @@ function Anonymous($compile) {
     return AbstractController;
 }
 
-})();
+})(window._, window.angular, window.chaos, window.Lockr);

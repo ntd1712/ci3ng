@@ -1,4 +1,4 @@
-(function() { "use strict";
+(function(chaos) { "use strict";
 /**
  * @author ntd1712
  */
@@ -63,4 +63,4 @@ function configBlocks($stateProvider) {
         });
 }
 
-})();
+})(window.chaos);

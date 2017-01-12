@@ -1,4 +1,4 @@
-(function($) { "use strict";
+(function(document, window, $) { "use strict";
 /**
  * HOMER - Responsive Admin Theme
  * version 1.8
@@ -20,10 +20,10 @@ function fixWrapperHeight($window) {
 
 function setBodySmall($window) {
     if (769 > $window.width()) {
-        $("body").addClass("page-small");
+        $(document.body).addClass("page-small");
     }
     else {
-        $("body").removeClass("page-small show-sidebar");
+        $(document.body).removeClass("page-small show-sidebar");
     }
 
     return $window;
@@ -50,10 +50,7 @@ var $window = $(window)
     });
 
 $(function() {
-    // set minimal height of #wrapper to fit the window
-    fixWrapperHeight($window);
-    // add special class to minimize page elements when screen is less than 768px
-    setPanelSize(setBodySmall($window));
+    $window.trigger("click");
 });
 
-})(jQuery);
+})(document, window, window.jQuery);
