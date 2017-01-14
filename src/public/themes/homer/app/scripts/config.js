@@ -52,7 +52,7 @@ function configBlocks($compileProvider, $httpProvider, $urlRouterProvider,
         unauthenticatedRedirector: ["$state", function($state) {
             $state.go("login", {}, { reload: true });
         }],
-        whiteListedDomains: ["localhost", "127.0.0.1", String(CFG.session.domain)]
+        whiteListedDomains: [String(CFG.session.domain), "localhost", "127.0.0.1", "0.0.0.0"]
     });
 
     $httpProvider.interceptors.push("jwtInterceptor", "RequestProvider");
