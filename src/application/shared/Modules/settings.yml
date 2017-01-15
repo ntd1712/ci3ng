@@ -1,37 +1,42 @@
 app:
-  env: production # local, production, testing
+  env: local # local, production, testing
   theme: homer # homer, inspinia
   url: ''
   imports:
   - { resource: custom.yml }
-  - { resource: ../../%application%/config/config.php }
-  aliases:
-  providers:
+  #- { resource: ../../system/config/config.php }
 
 db:
   imports:
-  - { resource: ../../%application%/config/database.php }
+  #- { resource: %base_path%/config/database.php }
 
 mail:
-  imports:
-  - { resource: ../../%application%/config/mail.php }
+  driver: smtp
+  host: smtp.mailgun.org
+  port: 587
+  from:
+    address: hello@example.com
+    name: Example
+  encryption: tls
+  username:
+  password:
+  sendmail: /usr/sbin/sendmail -bs
 
 orm:
   metadata:
     paths:
-    - %base_path%/application/shared/Modules/Account/Entities
-    - %base_path%/application/shared/Modules/System/Entities
+    - %base_path%/../shared/Modules/Account/Entities
+    - %base_path%/../shared/Modules/System/Entities
+  proxy_classes:
+    directory: %base_path%/cache/proxies
 
 paths:
-  api: %base_path%/public/api
-  uploads: %base_path%/public/uploads
+  api: %base_path%/../../public/api
+  uploads: %base_path%/../../public/uploads
 
 session:
-  cookie: chaos
-  imports:
-  - { resource: ../../%application%/config/session.php }
-  files:
-  table:
+  cookie: ci3ng_session
+  domain:
 
 urls:
   api: %base_url%/api

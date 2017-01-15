@@ -31,7 +31,7 @@ if (!function_exists('env'))
                 return '';
             case 'null':
             case '(null)':
-                return;
+                return null;
         }
 
         if (startsWith($value, '"') && endsWith($value, '"'))

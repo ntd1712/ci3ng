@@ -4,8 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "29cecfd361f1d663ed9fd783a460d796",
-    "content-hash": "a038677e18c8eb3ac9ff5f3baf8e7748",
+    "content-hash": "1b4b7920653c76e526b194286e8de26b",
     "packages": [
         {
             "name": "chaos/common",
@@ -81,20 +80,20 @@
                 "source": "https://github.com/ntd1712/common/tree/master",
                 "issues": "https://github.com/ntd1712/common/issues"
             },
-            "time": "2017-01-10 16:16:09"
+            "time": "2017-01-10T16:16:09+00:00"
         },
         {
             "name": "chriskacerguis/codeigniter-restserver",
-            "version": "2.8.0",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/chriskacerguis/codeigniter-restserver.git",
-                "reference": "524718b31e31e0bd6c4b26a6770a0f9395f7f2c1"
+                "reference": "ee06e378d50ff28bfeba88c554bf2ae5c65907ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/chriskacerguis/codeigniter-restserver/zipball/524718b31e31e0bd6c4b26a6770a0f9395f7f2c1",
-                "reference": "524718b31e31e0bd6c4b26a6770a0f9395f7f2c1",
+                "url": "https://api.github.com/repos/chriskacerguis/codeigniter-restserver/zipball/ee06e378d50ff28bfeba88c554bf2ae5c65907ce",
+                "reference": "ee06e378d50ff28bfeba88c554bf2ae5c65907ce",
                 "shasum": ""
             },
             "require": {
@@ -119,7 +118,7 @@
             ],
             "description": "REST Server for the CodeIgniter framework",
             "homepage": "https://github.com/chriskacerguis/codeigniter-restserver",
-            "time": "2016-12-31 16:55:37"
+            "time": "2017-01-01T02:27:48+00:00"
         },
         {
             "name": "codeigniter/framework",
@@ -151,7 +150,7 @@
             ],
             "description": "The CodeIgniter framework",
             "homepage": "https://codeigniter.com",
-            "time": "2017-01-09 14:32:03"
+            "time": "2017-01-09T14:32:03+00:00"
         },
         {
             "name": "davinder17s/codeigniter-middleware",
@@ -229,7 +228,7 @@
                 "docblock",
                 "parser"
             ],
-            "time": "2016-12-30 15:59:45"
+            "time": "2016-12-30T15:59:45+00:00"
         },
         {
             "name": "doctrine/cache",
@@ -299,7 +298,7 @@
                 "cache",
                 "caching"
             ],
-            "time": "2016-10-29 11:16:17"
+            "time": "2016-10-29T11:16:17+00:00"
         },
         {
             "name": "doctrine/collections",
@@ -365,7 +364,7 @@
                 "collections",
                 "iterator"
             ],
-            "time": "2015-04-14 22:21:58"
+            "time": "2015-04-14T22:21:58+00:00"
         },
         {
             "name": "doctrine/common",
@@ -438,7 +437,7 @@
                 "persistence",
                 "spl"
             ],
-            "time": "2015-12-25 13:10:16"
+            "time": "2015-12-25T13:10:16+00:00"
         },
         {
             "name": "doctrine/dbal",
@@ -509,7 +508,7 @@
                 "persistence",
                 "queryobject"
             ],
-            "time": "2017-01-14 21:05:28"
+            "time": "2017-01-14T21:05:28+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -576,7 +575,7 @@
                 "singularize",
                 "string"
             ],
-            "time": "2015-11-06 14:35:42"
+            "time": "2015-11-06T14:35:42+00:00"
         },
         {
             "name": "doctrine/instantiator",
@@ -630,7 +629,7 @@
                 "constructor",
                 "instantiate"
             ],
-            "time": "2015-06-14 21:17:01"
+            "time": "2015-06-14T21:17:01+00:00"
         },
         {
             "name": "doctrine/lexer",
@@ -684,7 +683,7 @@
                 "lexer",
                 "parser"
             ],
-            "time": "2014-09-09 13:34:57"
+            "time": "2014-09-09T13:34:57+00:00"
         },
         {
             "name": "doctrine/orm",
@@ -761,7 +760,7 @@
                 "database",
                 "orm"
             ],
-            "time": "2015-11-23 12:44:25"
+            "time": "2015-11-23T12:44:25+00:00"
         },
         {
             "name": "emarref/jwt",
@@ -803,7 +802,7 @@
                 }
             ],
             "description": "A JWT implementation",
-            "time": "2016-09-05 20:33:06"
+            "time": "2016-09-05T20:33:06+00:00"
         },
         {
             "name": "ezyang/htmlpurifier",
@@ -847,7 +846,7 @@
             "keywords": [
                 "html"
             ],
-            "time": "2016-07-16 12:58:58"
+            "time": "2016-07-16T12:58:58+00:00"
         },
         {
             "name": "ircmaxell/password-compat",
@@ -889,7 +888,7 @@
                 "hashing",
                 "password"
             ],
-            "time": "2014-11-20 16:49:30"
+            "time": "2014-11-20T16:49:30+00:00"
         },
         {
             "name": "m1/vars",
@@ -960,7 +959,7 @@
                 "xml",
                 "yml"
             ],
-            "time": "2016-05-18 12:35:01"
+            "time": "2016-05-18T12:35:01+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -1007,7 +1006,7 @@
                 "datetime",
                 "time"
             ],
-            "time": "2015-11-04 20:07:17"
+            "time": "2015-11-04T20:07:17+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -1055,7 +1054,7 @@
                 "pseudorandom",
                 "random"
             ],
-            "time": "2016-11-07 23:38:38"
+            "time": "2016-11-07T23:38:38+00:00"
         },
         {
             "name": "psr/log",
@@ -1102,7 +1101,7 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2016-10-10 12:19:37"
+            "time": "2016-10-10T12:19:37+00:00"
         },
         {
             "name": "ramsey/uuid",
@@ -1184,7 +1183,7 @@
                 "identifier",
                 "uuid"
             ],
-            "time": "2016-11-22 19:21:44"
+            "time": "2016-11-22T19:21:44+00:00"
         },
         {
             "name": "symfony/config",
@@ -1240,7 +1239,7 @@
             ],
             "description": "Symfony Config Component",
             "homepage": "https://symfony.com",
-            "time": "2017-01-02 20:30:24"
+            "time": "2017-01-02T20:30:24+00:00"
         },
         {
             "name": "symfony/console",
@@ -1303,7 +1302,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2017-01-08 20:47:33"
+            "time": "2017-01-08T20:47:33+00:00"
         },
         {
             "name": "symfony/debug",
@@ -1360,7 +1359,7 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2017-01-02 20:32:22"
+            "time": "2017-01-02T20:32:22+00:00"
         },
         {
             "name": "symfony/dependency-injection",
@@ -1423,7 +1422,7 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2017-01-10 14:27:01"
+            "time": "2017-01-10T14:27:01+00:00"
         },
         {
             "name": "symfony/filesystem",
@@ -1472,7 +1471,7 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "https://symfony.com",
-            "time": "2016-07-20 05:43:46"
+            "time": "2016-07-20T05:43:46+00:00"
         },
         {
             "name": "symfony/intl",
@@ -1547,7 +1546,7 @@
                 "l10n",
                 "localization"
             ],
-            "time": "2017-01-02 20:32:22"
+            "time": "2017-01-02T20:32:22+00:00"
         },
         {
             "name": "symfony/polyfill",
@@ -1636,7 +1635,7 @@
                 "polyfill",
                 "shim"
             ],
-            "time": "2016-11-14 01:15:23"
+            "time": "2016-11-14T01:15:23+00:00"
         },
         {
             "name": "symfony/translation",
@@ -1700,7 +1699,7 @@
             ],
             "description": "Symfony Translation Component",
             "homepage": "https://symfony.com",
-            "time": "2017-01-02 20:32:22"
+            "time": "2017-01-02T20:32:22+00:00"
         },
         {
             "name": "symfony/yaml",
@@ -1749,7 +1748,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2017-01-03 13:49:52"
+            "time": "2017-01-03T13:49:52+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -1799,7 +1798,7 @@
                 "env",
                 "environment"
             ],
-            "time": "2016-09-01 10:05:43"
+            "time": "2016-09-01T10:05:43+00:00"
         },
         {
             "name": "zendframework/zend-db",
@@ -1851,7 +1850,7 @@
                 "db",
                 "zf2"
             ],
-            "time": "2015-06-03 15:32:00"
+            "time": "2015-06-03T15:32:00+00:00"
         },
         {
             "name": "zendframework/zend-filter",
@@ -1909,7 +1908,7 @@
                 "filter",
                 "zf2"
             ],
-            "time": "2015-06-03 15:32:01"
+            "time": "2015-06-03T15:32:01+00:00"
         },
         {
             "name": "zendframework/zend-hydrator",
@@ -1967,7 +1966,7 @@
                 "hydrator",
                 "zf2"
             ],
-            "time": "2016-02-18 22:38:26"
+            "time": "2016-02-18T22:38:26+00:00"
         },
         {
             "name": "zendframework/zend-i18n",
@@ -2030,7 +2029,7 @@
                 "i18n",
                 "zf2"
             ],
-            "time": "2015-06-03 15:32:01"
+            "time": "2015-06-03T15:32:01+00:00"
         },
         {
             "name": "zendframework/zend-json",
@@ -2084,7 +2083,7 @@
                 "json",
                 "zf2"
             ],
-            "time": "2015-06-03 15:32:01"
+            "time": "2015-06-03T15:32:01+00:00"
         },
         {
             "name": "zendframework/zend-servicemanager",
@@ -2134,7 +2133,7 @@
                 "servicemanager",
                 "zf2"
             ],
-            "time": "2015-06-03 15:32:02"
+            "time": "2015-06-03T15:32:02+00:00"
         },
         {
             "name": "zendframework/zend-stdlib",
@@ -2193,7 +2192,7 @@
                 "stdlib",
                 "zf2"
             ],
-            "time": "2016-04-12 21:17:31"
+            "time": "2016-04-12T21:17:31+00:00"
         },
         {
             "name": "zendframework/zend-validator",
@@ -2259,7 +2258,7 @@
                 "validator",
                 "zf2"
             ],
-            "time": "2015-06-03 15:32:03"
+            "time": "2015-06-03T15:32:03+00:00"
         }
     ],
     "packages-dev": [
@@ -2311,7 +2310,7 @@
                 "faker",
                 "fixtures"
             ],
-            "time": "2017-01-05 16:44:55"
+            "time": "2017-01-05T16:44:55+00:00"
         }
     ],
     "aliases": [],

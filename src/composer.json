@@ -15,16 +15,13 @@
     "nesbot/carbon": "~1.21",
     "vlucas/phpdotenv": "~2.4",
     "codeigniter/framework": "~3.1.2",
-    "chriskacerguis/codeigniter-restserver": "~2.7",
+    "chriskacerguis/codeigniter-restserver": "~3.0",
     "davinder17s/codeigniter-middleware": "*"
   },
   "require-dev": {
     "fzaninotto/faker": "dev-master"
   },
   "autoload": {
-    "classmap": [
-      "vendor/chriskacerguis/codeigniter-restserver/application/libraries/REST_Controller.php"
-    ],
     "psr-4": {
       "Shared\\": "application/shared/",
       "": "application/shared/Modules/"

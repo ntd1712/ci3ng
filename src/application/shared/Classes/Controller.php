@@ -19,10 +19,11 @@ abstract class Controller extends AbstractCodeIgniterRestController
         array_unshift($config, __DIR__ . '/../Modules/settings.yml');
 
         $config['__options__'] = [
-            'cache_path' => APPPATH . '/cache',
+            'cache' => false,
+            'cache_path' => APPPATH . 'cache',
             'replacements' => [
-                'base_path' => realpath(__DIR__ . '/../../../'),
-                'base_url' => rtrim($config['base_url'], '/')
+                'base_path' => rtrim(APPPATH, DIRECTORY_SEPARATOR),
+                'base_url' => rtrim(config_item('base_url'), '/')
             ]
         ];
 
