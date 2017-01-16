@@ -1,14 +1,20 @@
 app:
   env: local # local, production, testing
   theme: homer # homer, inspinia
-  url: ''
+  url: 'http://ci3ng.local'
   imports:
   - { resource: custom.yml }
-  #- { resource: ../../system/config/config.php }
 
 db:
-  imports:
-  #- { resource: %base_path%/config/database.php }
+  default: mysql
+  connections:
+    mysql:
+      driver: pdo_mysql
+      host: localhost
+      dbname: forge
+      user: forge
+      password:
+      prefix: tbl_
 
 mail:
   driver: smtp
