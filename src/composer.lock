@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ntd1712/common.git",
-                "reference": "2231660162fabfcf7016746a6ac97c081614e8d3"
+                "reference": "8bf0e49f41798ef3f209de796d61d068dd622a9a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ntd1712/common/zipball/2231660162fabfcf7016746a6ac97c081614e8d3",
-                "reference": "2231660162fabfcf7016746a6ac97c081614e8d3",
+                "url": "https://api.github.com/repos/ntd1712/common/zipball/8bf0e49f41798ef3f209de796d61d068dd622a9a",
+                "reference": "8bf0e49f41798ef3f209de796d61d068dd622a9a",
                 "shasum": ""
             },
             "archive": {
@@ -93,7 +93,7 @@
                 "source": "https://github.com/ntd1712/common/tree/master",
                 "issues": "https://github.com/ntd1712/common/issues"
             },
-            "time": "2017-01-21T03:19:54+00:00"
+            "time": "2017-01-21T05:47:42+00:00"
         },
         {
             "name": "chriskacerguis/codeigniter-restserver",
