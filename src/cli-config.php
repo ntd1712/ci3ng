@@ -1,8 +1,10 @@
 <?php
 
+// CodeIgniter
 define('APPPATH', __DIR__ . '/application/system' . DIRECTORY_SEPARATOR);
 require_once __DIR__ . '/application/shared/bootstrap.php';
 
+// Doctrine
 $config = glob(__DIR__ . '/application/shared/Modules/*/settings.yml', GLOB_NOSORT);
 array_unshift($config, __DIR__ . '/application/shared/Modules/settings.yml');
 

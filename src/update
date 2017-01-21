@@ -25,5 +25,7 @@ vendor/bin/doctrine orm:generate:proxies
 
 echo
 echo "Deleting temporary files ..."
+ls application/system/cache/data/* | grep -v .gitignore | xargs rm -f
 ls application/system/cache/sessions/* | grep -v .gitignore | xargs rm -f
+ls application/system/cache/vars/* | grep -v .gitignore | xargs rm -f
 ls application/system/logs/* | grep -v .gitignore | xargs rm -f

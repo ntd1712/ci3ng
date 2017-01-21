@@ -10,12 +10,12 @@
   ],
   "require": {
     "chaos/common": "dev-master@dev",
-    "ezyang/htmlpurifier": "~4.8",
-    "emarref/jwt": "~1.0",
-    "nesbot/carbon": "~1.21",
-    "vlucas/phpdotenv": "~2.4",
-    "codeigniter/framework": "~3.1.2",
-    "chriskacerguis/codeigniter-restserver": "~3.0",
+    "ezyang/htmlpurifier": "^4.8",
+    "emarref/jwt": "^1.0",
+    "nesbot/carbon": "^1.22",
+    "vlucas/phpdotenv": "^2.4",
+    "codeigniter/framework": "~3.1.3",
+    "chriskacerguis/codeigniter-restserver": "~3.0.0",
     "davinder17s/codeigniter-middleware": "*"
   },
   "require-dev": {
