@@ -4,7 +4,7 @@
   "type": "project",
   "keywords": ["ntd1712", "chaos", "ci3ng", "codeigniter", "doctrine", "angular"],
   "homepage": "https://github.com/ntd1712",
-  "license": "GPLv2",
+  "license": "GPL-2.0",
   "authors": [
     {"name": "Dzung Nguyen", "email": "ntd1712@hotmail.com"}
   ],
@@ -19,15 +19,20 @@
     "davinder17s/codeigniter-middleware": "*"
   },
   "require-dev": {
-    "fzaninotto/faker": "dev-master"
+    "barryvdh/laravel-ide-helper": "^2.2",
+    "fzaninotto/faker": "^1.6",
+    "squizlabs/php_codesniffer": "^2.7"
   },
   "autoload": {
+    "files": [
+      "application/shared/functions.php"
+    ],
     "psr-4": {
       "Shared\\": "application/shared/",
       "": "application/shared/Modules/"
     },
-    "files": [
-      "application/shared/functions.php"
+    "exclude-from-classmap": [
+      "/tests/"
     ]
   },
   "minimum-stability": "dev",
@@ -49,7 +54,9 @@
   }],
   "config": {
     "discard-changes": true,
-    "preferred-install": "dist"
+    "preferred-install": "dist",
+    "process-timeout": 5000,
+    "store-auths": true
   },
   "scripts": {
     "post-install-cmd": [
@@ -57,6 +64,11 @@
     ],
     "post-update-cmd": [
       "sh update"
-    ]
+    ],
+    "sniff": "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests",
+    "format": "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
+  },
+  "archive": {
+    "exclude": ["!vendor", "tests", "*phpunit.xml", ".travis.yml", "composer.phar"]
   }
 }

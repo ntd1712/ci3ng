@@ -1,7 +1,9 @@
 app:
-  env: local # local, production, testing
+  debug: %^APP_DEBUG%
+  env: %^APP_ENV% # local, production, testing
+  key: %^APP_KEY%
   theme: homer # homer, inspinia
-  url: 'http://ci3ng.local'
+  url: %^APP_URL%
   imports:
   - { resource: custom.yml }
 
@@ -9,26 +11,30 @@ db:
   default: mysql
   connections:
     mysql:
-      driver: pdo_mysql
-      host: localhost
-      dbname: forge
-      user: forge
+      driver: %^DB_DRIVER%
+      host: %^DB_HOST%
+      port: %^DB_PORT%
+      dbname: %^DB_DATABASE%
+      user: %^DB_USERNAME%
       password:
-      prefix: tbl_
+      prefix: %^DB_TABLE_PREFIX%
 
 mail:
-  driver: smtp
-  host: smtp.mailgun.org
-  port: 587
+  driver: %^MAIL_DRIVER%
+  host: %^MAIL_HOST%
+  port: %^MAIL_PORT%
   from:
     address: hello@example.com
     name: Example
-  encryption: tls
+  encryption: %^MAIL_ENCRYPTION%
   username:
   password:
   sendmail: /usr/sbin/sendmail -bs
 
 orm:
+  cache:
+    file:
+      directory: %base_path%/cache/data
   metadata:
     paths:
     - %base_path%/../shared/Modules/Account/Entities
@@ -41,8 +47,8 @@ paths:
   uploads: %base_path%/../../public/uploads
 
 session:
-  cookie: ci3ng_session
-  domain:
+  cookie: %^COOKIE_PREFIX%_session
+  domain: %^COOKIE_DOMAIN%
 
 urls:
   api: %base_url%/api

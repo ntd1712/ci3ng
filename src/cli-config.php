@@ -26,13 +26,13 @@ $config = [
         'cache' => [
             'provider' => env('CACHE_DRIVER'),
             'file' => [
-                'directory' => APPPATH . 'cache/',
+                'directory' => APPPATH . 'cache/data/',
                 'extension' => '.' . env('COOKIE_PREFIX') . '.data'
             ]
         ],
         'metadata' => [
             'driver' => 'annotation',
-            'paths' => require_once __DIR__ . '/application/shared/Modules/doctrine.paths.php',
+            'paths' => glob(APPPATH . 'shared/Modules/*/Entities'),
             'simple' => false
         ],
         'proxy_classes' => [
@@ -41,7 +41,7 @@ $config = [
             'namespace' => null,
         ],
         'debug' => $db[$active_group]['db_debug'],
-        'default_repository' => DOCTRINE_ENTITY_REPOSITORY,
+        'default_repository' => 'Doctrine\ORM\EntityRepository',
         'sql_logger' => $db[$active_group]['db_debug'] ? new DebugStack : null,
     ]
 ];
