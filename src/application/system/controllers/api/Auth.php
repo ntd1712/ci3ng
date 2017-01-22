@@ -27,28 +27,30 @@ class Auth extends \Shared\Classes\Controller
      */
     public function login_post()
     {
+        $request = $this->getRequest();
+
         // are we logging out, or doing something else?
-        if (true === (bool)$this->post('logout'))
+        if (isset($request['logout']) && true === (bool)$request['logout'])
         {
             $this->logout_post();
             return;
         }
 
         // do some checks
-        if (empty($this->post('email')) || false === filter_var($this->post('email'), FILTER_VALIDATE_EMAIL))
+        if (empty($request['email']) || false === filter_var($request['email'], FILTER_VALIDATE_EMAIL))
         {
             throw new Exceptions\ValidateException('Email is empty or invalid');
         }
 
-        if (empty($this->post('password')))
+        if (empty($request['password']))
         {
             throw new Exceptions\ValidateException('Password is empty');
         }
 
         /** @var \Account\Entities\User $entity */
-        $entity = $this->getService('User')->getByEmail($this->post('email'));
+        $entity = $this->getService('User')->getByEmail($request['email']);
 
-        if (null === $entity || !password_verify($this->post('password'), $entity->getPassword()))
+        if (null === $entity || !password_verify($request['password'], $entity->getPassword()))
         {
             throw new Exceptions\ValidateException('Invalid credentials');
         }
@@ -74,8 +76,8 @@ class Auth extends \Shared\Classes\Controller
         }
 
         // save into session
-        $this->session->set_userdata('loggedName', $user['Name']);
-        $this->session->set_userdata('loggedUser', $user);
+        $_SESSION['loggedName'] = $user['Name'];
+        $_SESSION['loggedUser'] = $user;
 
         // generate JWT
         $algorithm = new Jwt\Algorithm\Hs256($this->getConfig()->get('auth.drivers.jwt.secret'));
@@ -106,7 +108,7 @@ class Auth extends \Shared\Classes\Controller
         // }
         // catch (JWTException $e) {}
 
-        $this->session->unset_userdata(['loggedName', 'loggedUser']);
+        unset($_SESSION['loggedName'], $_SESSION['loggedUser']);
         $this->set_response(['success' => true]);
     }
 
@@ -120,7 +122,7 @@ class Auth extends \Shared\Classes\Controller
 
         if (empty($token))
         {
-            throw new Exceptions\JWTException('A token is required', 400);
+            throw new \Exception('A token is required', 400);
         }
 
         $algorithm = new Jwt\Algorithm\Hs256($appKey = $this->getConfig()->get('app.key'));
@@ -134,34 +136,5 @@ class Auth extends \Shared\Classes\Controller
 
         // $newToken = $this->auth->setRequest($request)->parseToken()->refresh();
         // $this->output->set_header('Authorization: Bearer ' . $newToken);
-    }
-
-    private function verify()
-    {
-        $auth = isset($_SERVER['HTTP_AUTHORIZATION']) ? $_SERVER['HTTP_AUTHORIZATION'] : false;
-
-        if (!$auth)
-        {
-            // Authorization header not found
-        }
-
-        list($jwt) = sscanf($auth, 'Bearer %s');
-
-        if (!$jwt)
-        {
-            // No token found in authorization header?
-        }
-
-        try
-        {
-            $token = JWT::decode($jwt, $secret_key, array('HS256'));
-
-            // check for issuer
-
-            // check for subject
-        }
-        catch (Exception $e) {
-            // rest_auth_invalid_token
-        }
     }
 }

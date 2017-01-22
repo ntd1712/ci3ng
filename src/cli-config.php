@@ -1,7 +1,6 @@
 <?php
 
 // CodeIgniter
-define('APPPATH', __DIR__ . '/application/system' . DIRECTORY_SEPARATOR);
 require_once __DIR__ . '/application/shared/bootstrap.php';
 
 // Doctrine
@@ -9,9 +8,9 @@ $config = glob(__DIR__ . '/application/shared/Modules/*/settings.yml', GLOB_NOSO
 array_unshift($config, __DIR__ . '/application/shared/Modules/settings.yml');
 
 $config['__options__'] = [
-    'cache_path' => APPPATH . 'cache',
+    'cache_path' => __DIR__ . '/application/system/cache',
     'replacements' => [
-        'base_path' => rtrim(APPPATH, DIRECTORY_SEPARATOR),
+        'base_path' => __DIR__ . '/application/system',
         'base_url' => ''
     ]
 ];
