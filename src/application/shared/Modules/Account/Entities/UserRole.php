@@ -1,6 +1,6 @@
 <?php namespace Account\Entities;
 
-use Chaos\Common\AbstractBaseEntity;
+use Chaos\Foundation\AbstractBaseEntity;
 
 /**
  * Class UserRole

@@ -1,6 +1,6 @@
 <?php namespace Account\Repositories;
 
-use Chaos\Common\AbstractDoctrineRepository;
+use Chaos\Foundation\AbstractDoctrineRepository;
 
 /**
  * Class PermissionRepository

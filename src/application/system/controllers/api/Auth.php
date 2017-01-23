@@ -2,7 +2,7 @@
 
 use Carbon\Carbon,
     Emarref\Jwt,
-    Chaos\Common\Exceptions;
+    Chaos\Foundation\Exceptions;
 
 /**
  * Class Auth

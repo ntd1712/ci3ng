@@ -15,5 +15,5 @@ $config['__options__'] = [
     ]
 ];
 
-$entityManager = (new Chaos\Doctrine\EntityManagerFactory)->setConfig($config)->getEntityManager();
+$entityManager = (new Chaos\Bridge\Doctrine\EntityManagerFactory)->setConfig($config)->getEntityManager();
 return Doctrine\ORM\Tools\Console\ConsoleRunner::createHelperSet($entityManager);

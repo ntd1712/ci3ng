@@ -1,6 +1,6 @@
 <?php namespace System\Services;
 
-use Chaos\Common\AbstractBaseService;
+use Chaos\Foundation\AbstractBaseService;
 
 /**
  * Class LookupService

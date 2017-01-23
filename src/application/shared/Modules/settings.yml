@@ -21,7 +21,7 @@ db:
       port: %^DB_PORT%
       dbname: %^DB_DATABASE%
       user: %^DB_USERNAME%
-      password:
+      password: %^DB_PASSWORD%
       prefix: %^DB_TABLE_PREFIX%
 
 mail:

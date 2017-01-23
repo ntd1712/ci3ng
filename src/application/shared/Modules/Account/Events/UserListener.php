@@ -1,6 +1,6 @@
 <?php namespace Account\Events;
 
-use Chaos\Common\AbstractBaseEntityListener;
+use Chaos\Foundation\AbstractBaseEntityListener;
 
 /**
  * Class UserListener

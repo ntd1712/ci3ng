@@ -1,7 +1,7 @@
 <?php namespace Account\Services;
 
-use Chaos\Common\AbstractBaseService;
-use Chaos\Common\Events\UpdateEventArgs;
+use Chaos\Foundation\AbstractBaseService,
+    Chaos\Foundation\Events\UpdateEventArgs;
 
 /**
  * Class RoleService

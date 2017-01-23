@@ -1,8 +1,8 @@
 <?php namespace Account\Entities;
 
-use Chaos\Common\AbstractBaseEntity;
-use Chaos\Common\Traits\AuditEntityTrait;
-use Chaos\Common\Traits\IdentityEntityTrait;
+use Chaos\Foundation\AbstractBaseEntity,
+    Chaos\Foundation\Traits\AuditEntityTrait,
+    Chaos\Foundation\Traits\IdentityEntityTrait;
 
 /**
  * Class User

@@ -1,9 +1,9 @@
 <?php namespace Account\Services;
 
-use Symfony\Component\Security\Core\Encoder\BCryptPasswordEncoder;
-use Chaos\Common\AbstractBaseService;
-use Chaos\Common\Events\UpdateEventArgs;
-use Chaos\Common\Exceptions\ValidateException;
+use Symfony\Component\Security\Core\Encoder\BCryptPasswordEncoder,
+    Chaos\Foundation\AbstractBaseService,
+    Chaos\Foundation\Events\UpdateEventArgs,
+    Chaos\Foundation\Exceptions\ValidateException;
 
 /**
  * Class UserService

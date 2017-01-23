@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ntd1712/common.git",
-                "reference": "8bf0e49f41798ef3f209de796d61d068dd622a9a"
+                "reference": "8b85ffd6cf9f43d723edbba230169e0955e99527"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ntd1712/common/zipball/8bf0e49f41798ef3f209de796d61d068dd622a9a",
-                "reference": "8bf0e49f41798ef3f209de796d61d068dd622a9a",
+                "url": "https://api.github.com/repos/ntd1712/common/zipball/8b85ffd6cf9f43d723edbba230169e0955e99527",
+                "reference": "8b85ffd6cf9f43d723edbba230169e0955e99527",
                 "shasum": ""
             },
             "archive": {
@@ -50,11 +50,11 @@
             "type": "library",
             "autoload": {
                 "files": [
-                    "src/Chaos/defines.php",
-                    "src/Chaos/functions.php"
+                    "src/defines.php",
+                    "src/functions.php"
                 ],
                 "psr-4": {
-                    "Chaos\\": "src/Chaos/"
+                    "Chaos\\": "src/"
                 },
                 "exclude-from-classmap": [
                     "/tests/"
@@ -62,7 +62,7 @@
             },
             "autoload-dev": {
                 "psr-4": {
-                    "Chaos\\Tests\\": "tests"
+                    "Chaos\\Tests\\": "tests/"
                 }
             },
             "scripts": {
@@ -93,7 +93,7 @@
                 "source": "https://github.com/ntd1712/common/tree/master",
                 "issues": "https://github.com/ntd1712/common/issues"
             },
-            "time": "2017-01-21T05:47:42+00:00"
+            "time": "2017-01-23T09:43:39+00:00"
         },
         {
             "name": "chriskacerguis/codeigniter-restserver",
@@ -315,28 +315,29 @@
         },
         {
             "name": "doctrine/collections",
-            "version": "v1.3.0",
+            "version": "v1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/collections.git",
-                "reference": "6c1e4eef75f310ea1b3e30945e9f06e652128b8a"
+                "reference": "1a4fb7e902202c33cce8c55989b945612943c2ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/collections/zipball/6c1e4eef75f310ea1b3e30945e9f06e652128b8a",
-                "reference": "6c1e4eef75f310ea1b3e30945e9f06e652128b8a",
+                "url": "https://api.github.com/repos/doctrine/collections/zipball/1a4fb7e902202c33cce8c55989b945612943c2ba",
+                "reference": "1a4fb7e902202c33cce8c55989b945612943c2ba",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.2"
+                "php": "^5.6 || ^7.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.0"
+                "doctrine/coding-standard": "~0.1@dev",
+                "phpunit/phpunit": "^5.7"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.2.x-dev"
+                    "dev-master": "1.3.x-dev"
                 }
             },
             "autoload": {
@@ -377,7 +378,7 @@
                 "collections",
                 "iterator"
             ],
-            "time": "2015-04-14T22:21:58+00:00"
+            "time": "2017-01-03T10:49:41+00:00"
         },
         {
             "name": "doctrine/common",

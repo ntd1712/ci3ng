@@ -1,6 +1,6 @@
 <?php namespace Account\Services;
 
-use Chaos\Common\AbstractBaseService;
+use Chaos\Foundation\AbstractBaseService;
 
 /**
  * Class UserRoleService

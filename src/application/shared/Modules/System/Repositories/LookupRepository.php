@@ -1,6 +1,6 @@
 <?php namespace System\Repositories;
 
-use Chaos\Common\AbstractDoctrineRepository;
+use Chaos\Foundation\AbstractDoctrineRepository;
 
 /**
  * Class LookupRepository

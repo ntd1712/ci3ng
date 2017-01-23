@@ -1,6 +1,6 @@
 <?php namespace System\Events;
 
-use Chaos\Common\AbstractBaseEntityListener;
+use Chaos\Foundation\AbstractBaseEntityListener;
 
 /**
  * Class AuditListener

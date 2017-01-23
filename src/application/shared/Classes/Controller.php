@@ -1,6 +1,6 @@
 <?php namespace Shared\Classes;
 
-use Chaos\Common\AbstractCodeIgniterRestController;
+use Chaos\Foundation\AbstractCodeIgniterRestController;
 
 define('REST_Controller', true);
 
@@ -19,6 +19,7 @@ abstract class Controller extends AbstractCodeIgniterRestController
         array_unshift($config, __DIR__ . '/../Modules/settings.yml');
 
         $config['__options__'] = [
+            'cache' => false,
             'cache_path' => APPPATH . 'cache',
             'replacements' => [
                 'base_path' => rtrim(APPPATH, DIRECTORY_SEPARATOR),
