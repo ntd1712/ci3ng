@@ -19,7 +19,7 @@ abstract class Controller extends AbstractCodeIgniterRestController
         array_unshift($config, __DIR__ . '/../Modules/settings.yml');
 
         $config['__options__'] = [
-            'cache' => 'production' === env('APP_ENV'),
+            'cache' => 'production' === ENVIRONMENT,
             'cache_path' => APPPATH . 'cache',
             'replacements' => [
                 'base_path' => rtrim(APPPATH, DIRECTORY_SEPARATOR),
