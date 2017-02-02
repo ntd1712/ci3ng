@@ -12,6 +12,7 @@
     "chaos/common": "dev-master@dev",
     "ezyang/htmlpurifier": "^4.8",
     "emarref/jwt": "^1.0",
+    "symfony/translation": "~2.8",
     "nesbot/carbon": "^1.22",
     "vlucas/phpdotenv": "^2.4",
     "codeigniter/framework": "~3.1.3",
