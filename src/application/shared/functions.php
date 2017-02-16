@@ -123,7 +123,7 @@ if (!function_exists('purify'))
                     break;
                 case false:
                     $config = HTMLPurifier_Config::createDefault();
-                    $config->set('Core.Encoding', 'UTF-8');
+                    $config->set('Core.Encoding', $encoding);
                     $config->set('HTML.Doctype', 'XHTML 1.0 Strict');
                 default:
             }
