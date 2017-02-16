@@ -92,10 +92,10 @@ if (!function_exists('startsWith'))
 if (!function_exists('purify'))
 {
     /**
-     * @param   $dirty_html
-     * @param   string|array|HTMLPurifier_Config|mixed $config
+     * @param   array|string $dirty_html
+     * @param   mixed|array|string|HTMLPurifier_Config $config
      * @param   string $encoding
-     * @return  string|array
+     * @return  array|string
      */
     function purify($dirty_html, $config = false, $encoding = 'UTF-8')
     {
