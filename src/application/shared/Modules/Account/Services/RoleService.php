@@ -9,7 +9,9 @@ use Chaos\Foundation\AbstractBaseService,
  */
 class RoleService extends AbstractBaseService
 {
-    /** {@inheritdoc} */
+    /**
+     * {@inheritdoc}
+     */
     protected function onBeforeSave(UpdateEventArgs $eventArgs)
     {
         $payload = $eventArgs->getPayload();

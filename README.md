@@ -35,9 +35,7 @@ https://nodejs.org#v4.4.7
 http://rubyinstaller.org
 
 # After Node is installed, run the following commands step by step:
-npm install -g bower
-npm install -g grunt-cli
-npm install -g less
+npm install -g bower grunt-cli less
 gem install sass
 
 ####################

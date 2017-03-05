@@ -29,7 +29,9 @@ class UserService extends AbstractBaseService
         return $this->getRepository()->getByName($value);
     }
 
-    /** {@inheritdoc} */
+    /**
+     * {@inheritdoc}
+     */
     protected function onExchangeArray(UpdateEventArgs $eventArgs)
     {
         $payload = $eventArgs->getPayload();

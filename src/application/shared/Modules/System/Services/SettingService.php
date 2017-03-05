@@ -9,7 +9,9 @@ use Chaos\Foundation\AbstractBaseService,
  */
 class SettingService extends AbstractBaseService
 {
-    /** {@inheritdoc} */
+    /**
+     * {@inheritdoc}
+     */
     protected function onAfterSave(UpdateEventArgs $eventArgs, $isDeleted = false)
     {
         // write data to cached file(s)
@@ -45,7 +47,9 @@ class SettingService extends AbstractBaseService
         }
     }
 
-    /** {@inheritdoc} */
+    /**
+     * {@inheritdoc}
+     */
     protected function onAfterDelete(UpdateEventArgs $eventArgs)
     {
         return $this->onAfterSave($eventArgs, true);
