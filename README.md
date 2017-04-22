@@ -19,8 +19,8 @@ service apache2 reload
 # Edit the hosts file: c:\Windows\System32\drivers\etc\hosts
 127.0.0.1   ci3ng.local
 
-# Edit the vhosts file: c:\wamp\bin\apache\apache2.4.9\conf\extra\httpd-vhosts.conf
-IncludeOptional "c:/wamp/www/ci3ng/deploys/20151217/local/httpd-vhosts.conf"
+# Edit the vhosts file: c:\wamp64\bin\apache\apache2.4.23\conf\extra\httpd-vhosts.conf
+IncludeOptional "c:/www/ci3ng/deploys/20151217/local/httpd-vhosts.conf"
 
 # Restart WampServer
 
